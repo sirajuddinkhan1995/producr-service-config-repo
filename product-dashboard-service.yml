@@ -1,3 +1,5 @@
+server:
+  port: 8086
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/product_service
@@ -13,9 +15,6 @@ spring:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-server:
-  port: 8084
 
 eureka:
   client:
