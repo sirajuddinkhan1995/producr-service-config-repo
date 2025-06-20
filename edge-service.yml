@@ -10,7 +10,7 @@ zuul:
   routes:
     product-service:
       path: /product/**
-      serviceId: product-service
+      url: http://localhost:8085/
     product-dashboard-service:
       path: /dashboard/**
-      serviceId: product-dashboard-service
+      url: http://localhost:8086/
