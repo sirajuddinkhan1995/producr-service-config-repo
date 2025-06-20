@@ -9,7 +9,7 @@ eureka:
 zuul:
   routes:
     product-service:
-      path: /basePath/v1**
+      path: /basePath/v1/**
       serviceId: product-service
     product-dashboard-service:
       path: /product-dashboard-service/**
