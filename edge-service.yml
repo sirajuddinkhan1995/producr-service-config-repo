@@ -9,8 +9,6 @@ eureka:
 zuul:
   routes:
     product-service:
-      path: /product/**
-      url: http://localhost:8085/
+      url: http://localhost:8085
     product-dashboard-service:
-      path: /dashboard/**
-      url: http://localhost:8086/
+      url: http://localhost:8086
