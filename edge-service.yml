@@ -11,10 +11,10 @@ spring:
     gateway:
       routes:
         - id: product-service
-          uri: lb://product-service
+          uri: lb://PRODUCT-SERVICE
           predicates:
-            - Path=/products/**
+            - Path=/basePath/v1/**
         - id: product-dashboard-service
-          uri: lb://product-dashboard-service
+          uri: lb://PRODUCT-DASHBOARD-SERVICE
           predicates:
-            - Path=/dashboard/**
+            - Path=/product-dashboard-service/**
