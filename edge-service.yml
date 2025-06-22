@@ -13,10 +13,10 @@ spring:
         webflux:
           routes:
             - id: product-service
-              uri: lb://PRODUCT-SERVICE
+              uri: lb://product-service
               predicates:
                 - Path=/basePath/v1/**
             - id: product-dashboard-service
-              uri: lb://PRODUCT-DASHBOARD-SERVICE
+              uri: lb://product-dashboard-service
               predicates:
                 - Path=/product-dashboard-service/**
