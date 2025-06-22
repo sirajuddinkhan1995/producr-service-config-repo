@@ -12,7 +12,7 @@ spring:
       server:
         webflux:
           routes:
-            - id: product-service-2
-              uri: lb://product-service-2
+            - id: product-service-new
+              uri: lb://product-service-new
               predicates:
                 - Path=/basePath/v1/**
