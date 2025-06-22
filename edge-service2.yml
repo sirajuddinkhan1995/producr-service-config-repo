@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: product-service-2
+              uri: lb://product-service-2
+              predicates:
+                - Path=/basePath/v1/**
