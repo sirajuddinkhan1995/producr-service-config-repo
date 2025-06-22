@@ -9,8 +9,8 @@ eureka:
 spring:
   cloud:
     gateway:
-	    server:
-	      webflux:
+      server:
+        webflux:
           routes:
             - id: product-service
               uri: lb://PRODUCT-SERVICE
