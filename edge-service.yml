@@ -9,12 +9,14 @@ eureka:
 spring:
   cloud:
     gateway:
-      routes:
-        - id: product-service
-          uri: lb://PRODUCT-SERVICE
-          predicates:
-            - Path=/basePath/v1/**
-        - id: product-dashboard-service
-          uri: lb://PRODUCT-DASHBOARD-SERVICE
-          predicates:
-            - Path=/product-dashboard-service/**
+	    server:
+	      webflux:
+          routes:
+            - id: product-service
+              uri: lb://PRODUCT-SERVICE
+              predicates:
+                - Path=/basePath/v1/**
+            - id: product-dashboard-service
+              uri: lb://PRODUCT-DASHBOARD-SERVICE
+              predicates:
+                - Path=/product-dashboard-service/**
