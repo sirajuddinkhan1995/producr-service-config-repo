@@ -13,10 +13,10 @@ spring:
         webflux:
           routes:
             - id: product-service
-              uri: lb://http://localhost:8085
+              uri: http://localhost:8085
               predicates:
                 - Path=/basePath/v1/**
             - id: product-dashboard-service
-              uri: lb://http://localhost:8086
+              uri: http://localhost:8086
               predicates:
                 - Path=/product-dashboard-service/**
